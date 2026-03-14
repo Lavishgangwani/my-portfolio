@@ -74,9 +74,9 @@ const EarthSection = lazy(() =>
   import('./earth').then(module => ({ default: module.EarthSection }))
 );
 
-const title = 'AI-Powered HRM System';
+const title = 'Intelligent Enterprise Policy Engine';
 const description =
-  'I led the design and development of an production-ready intelligent chatbot system that summarizes, compares, and queries HR policies and documents using DeepLake + Azure OpenAI and that intelligently, highlights updates, and integrates multimodal understanding using LLMs and Vector databases.';
+  'I led the design and development of a production-ready intelligent conversational agent that summarizes, compares, and queries enterprise policies and compliance documents using DeepLake + Azure OpenAI. The system highlights updates and integrates multimodal understanding using LLMs and Vector databases to streamline internal knowledge retrieval.';
 const roles = [
   'System Architecture & Design',
   'AI Chatbot Engineering (LLMs + DeepLake)',
@@ -138,9 +138,9 @@ export const SmartSparrow = () => {
           <ProjectTextRow>
             <ProjectSectionHeading>The problem</ProjectSectionHeading>
             <ProjectSectionText>
-              Conventional Human Resource Management Systems (HRMS) are limited in their ability to handle dynamic employee interactions and evolving policy documentation. HR teams are burdened with high volumes of repetitive queries—such as leave balances, policy clarifications, and onboarding steps—which require manual responses, leading to inefficiency and delay. Additionally, comparing old and new versions of HR documents (like leave policies, benefits, and compliance rules) is error-prone and time-consuming.
+              Conventional enterprise document systems are limited in their ability to handle dynamic employee interactions and evolving policy documentation. Administration teams are burdened with high volumes of repetitive queries—such as internal procedures, policy clarifications, and operational steps—which require manual responses, leading to inefficiency and delay. Additionally, comparing old and new versions of compliance documents (like IT policies, benefits, and regulatory rules) is error-prone and time-consuming.
 
-              These systems also lack intelligent understanding of context or memory across employee sessions, resulting in fragmented user experiences. The absence of real-time document summarization, semantic search, and automated change detection significantly hampers decision-making and reduces overall HR responsiveness.
+              These systems also lack intelligent understanding of context or memory across employee sessions, resulting in fragmented user experiences. The absence of real-time document summarization, semantic search, and automated change detection significantly hampers decision-making and reduces overall operational responsiveness.
             </ProjectSectionText>
           </ProjectTextRow>
         </ProjectSection>
@@ -178,8 +178,8 @@ export const SmartSparrow = () => {
                 The system uses Python, FastAPI, DeepLake (for embedding-based document retrieval),
                 and Azure OpenAI’s GPT models. We built a summary-comparison-query pipeline with support for
                 semantic search and document comparison. The system is designed to be flexible and
-                scalable, allowing for easy integration with various HRMS systems and seamless
-                collaboration with HR teams.
+                scalable, allowing for easy integration with various enterprise content management systems and seamless
+                collaboration with administration teams.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
@@ -217,43 +217,43 @@ export const SmartSparrow = () => {
           </ProjectSectionContent>
         </ProjectSection>
         <ProjectSection>
-  <ProjectSectionContent>
-    <ProjectTextRow center>
-      <ProjectSectionHeading>
-        Project Outcome: Intelligent HRMS Automation & Policy Intelligence System
-      </ProjectSectionHeading>
-      <ProjectSectionText>
-        This system addressed key limitations of conventional HRMS 
-        by integrating:
-        <br /><br />
-        <strong>Real-Time Document Summarization:</strong> Automated the summarization of lengthy 
-        HR policies and guidelines to deliver concise, contextual insights to employees.
-        <br /><br />
-        <strong>Context-Aware Chatbot Interface:</strong> Built a memory-enabled conversational 
-        agent capable of handling employee queries regarding onboarding, leaves, policies, and 
-        compliance, with continuity across sessions.
-        <br /><br />
-        <strong>Automated Policy Comparison Engine:</strong> Designed a document difference 
-        engine that compares historical and new versions of HR documents to highlight semantic and 
-        structural changes (e.g., benefits, leave policies, code of conduct).
-        <br /><br />
-        <strong>Semantic Search for Instant Answers:</strong> Enabled employees to query any 
-        HR-related document or policy using natural language and get accurate answers instantly via 
-        a semantic search layer.
-        <br /><br />
-        <strong>Reduced Manual Overhead:</strong> Cut down repetitive HR tasks by up to 70%, 
-        freeing HR teams to focus on strategic functions and improving response time for employee 
-        concerns.
-        <br /><br />
-        <strong>Improved HR Decision-Making:</strong> Provided HR leadership with visibility into 
-        evolving policy documents and employee concerns via analytics dashboards powered by change 
-        detection and usage patterns.
-      </ProjectSectionText>
-    </ProjectTextRow>
-  </ProjectSectionContent>
-</ProjectSection>
-      <Footer />
-       </ProjectContainer>
+          <ProjectSectionContent>
+            <ProjectTextRow center>
+              <ProjectSectionHeading>
+                Project Outcome: Intelligent Enterprise Automation & Policy Intelligence System
+              </ProjectSectionHeading>
+              <ProjectSectionText>
+                This system addressed key limitations of conventional enterprise systems
+                by integrating:
+                <br /><br />
+                <strong>Real-Time Document Summarization:</strong> Automated the summarization of lengthy
+                internal policies and guidelines to deliver concise, contextual insights to employees.
+                <br /><br />
+                <strong>Context-Aware Chatbot Interface:</strong> Built a memory-enabled conversational
+                agent capable of handling employee queries regarding internal procedures, policies, and
+                compliance, with continuity across sessions.
+                <br /><br />
+                <strong>Automated Policy Comparison Engine:</strong> Designed a document difference
+                engine that compares historical and new versions of compliance documents to highlight semantic and
+                structural changes (e.g., IT guidelines, vendor policies, code of conduct).
+                <br /><br />
+                <strong>Semantic Search for Instant Answers:</strong> Enabled employees to query any
+                company-related document or policy using natural language and get accurate answers instantly via
+                a semantic search layer.
+                <br /><br />
+                <strong>Reduced Manual Overhead:</strong> Cut down repetitive administrative tasks by up to 70%,
+                freeing teams to focus on strategic functions and improving response time for employee
+                concerns.
+                <br /><br />
+                <strong>Improved Strategic Decision-Making:</strong> Provided the leadership with visibility into
+                evolving policy documents and employee concerns via analytics dashboards powered by change
+                detection and usage patterns.
+              </ProjectSectionText>
+            </ProjectTextRow>
+          </ProjectSectionContent>
+        </ProjectSection>
+        <Footer />
+      </ProjectContainer>
     </>
   );
 };

@@ -15,7 +15,6 @@ import { cssProps, msToNum, numToMs } from '~/utils/style';
 import { baseMeta } from '~/utils/meta';
 import { Form, useActionData, useNavigation } from '@remix-run/react';
 import { json } from '@remix-run/cloudflare';
-import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses';
 import styles from './contact.module.css';
 
 export const meta = () => {
@@ -31,14 +30,6 @@ const MAX_MESSAGE_LENGTH = 4096;
 const EMAIL_PATTERN = /(.+)@(.+){2,}\.(.+){2,}/;
 
 export async function action({ context, request }) {
-  const ses = new SESClient({
-    region: 'us-east-1',
-    credentials: {
-      accessKeyId: context.cloudflare.env.AWS_ACCESS_KEY_ID,
-      secretAccessKey: context.cloudflare.env.AWS_SECRET_ACCESS_KEY,
-    },
-  });
-
   const formData = await request.formData();
   const isBot = String(formData.get('name'));
   const email = String(formData.get('email'));
@@ -65,30 +56,31 @@ export async function action({ context, request }) {
     errors.message = `Message must be shorter than ${MAX_MESSAGE_LENGTH} characters.`;
   }
 
-  if (Object.keys(errors).length > 0) {
-    return json({ errors });
-  }
+  const endpoint = context?.cloudflare?.env?.FORMSPREE_ENDPOINT || process.env.FORMSPREE_ENDPOINT || 'https://formspree.io/f/xkoqznyb';
 
-  // Send email via Amazon SES
-  await ses.send(
-    new SendEmailCommand({
-      Destination: {
-        ToAddresses: [context.cloudflare.env.EMAIL],
+  // Send email via Formspree
+  try {
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
       },
-      Message: {
-        Body: {
-          Text: {
-            Data: `From: ${email}\n\n${message}`,
-          },
-        },
-        Subject: {
-          Data: `Portfolio message from ${email}`,
-        },
-      },
-      Source: `Portfolio <${context.cloudflare.env.FROM_EMAIL}>`,
-      ReplyToAddresses: [email],
-    })
-  );
+      body: JSON.stringify({
+        email: email,
+        message: message
+      })
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error('Formspree error response:', errorData);
+      throw new Error(errorData.error || 'Formspree response was not ok');
+    }
+  } catch (error) {
+    console.error('Contact form submission error:', error);
+    return json({ errors: { message: `Sorry, there was an error sending your message: ${error.message}. Please try again later.` } });
+  }
 
   return json({ success: true });
 }

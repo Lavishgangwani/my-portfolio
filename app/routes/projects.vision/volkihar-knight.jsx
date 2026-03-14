@@ -53,13 +53,13 @@ const Carousel = lazy(() =>
 
 const Armor = lazy(() => import('./armor').then(module => ({ default: module.Armor })));
 
-const title = 'AI-Powered Proctoring & Cheating Detection System';
+const title = 'Intelligent Remote Assessment Monitor';
 const description =
-  "Designed and deployed a 24/7 AI-driven proctoring system that continuously monitors live exam feeds using CCTV and webcam sources. The system leverages YOLOv8 for high-accuracy detection of suspicious objects (phones, books), MediaPipe-based eye and pose tracking for behavioral analysis, and a real-time alert engine that notifies invigilators instantly upon detecting anomalies.It supports both real-time intervention and post-exam audit trails, automatically capturing and annotating keyframes with bounding boxes and context. A comprehensive PDF report is generated summarizing flagged activities, complete with timestamps and visual evidence—enabling unbiased, scalable supervision without requiring constant human oversight.";
-const roles = [ 'Computer Vision Integration',
+  "Designed and deployed a 24/7 AI-driven monitoring system that continuously analyzes live assessment feeds using CCTV and webcam sources. The system leverages YOLOv8 for high-accuracy detection of unauthorized objects (phones, books), MediaPipe-based eye and pose tracking for behavioral anomaly analysis, and a real-time alert engine that notifies administrators instantly upon detecting irregularities. It supports both real-time intervention and post-session audit trails, automatically capturing and annotating keyframes with bounding boxes and context. A comprehensive PDF report is generated summarizing flagged activities, complete with timestamps and visual evidence—enabling unbiased, scalable supervision without requiring constant human oversight.";
+const roles = ['Computer Vision Integration',
   'Real-time Alert System',
-'Backend Engineering',
-'PDF Reporting Engine'];
+  'Backend Engineering',
+  'PDF Reporting Engine'];
 
 export const meta = () => {
   return baseMeta({ title, description, prefix: 'Projects' });
@@ -96,7 +96,7 @@ export function VolkiharKnight() {
             <div className={styles.textSection}>
               <ProjectSectionHeading>The Problem</ProjectSectionHeading>
               <ProjectSectionText>
-                Traditional exam monitoring systems are ill-equipped to handle the complexities of real-time surveillance across diverse testing environments. Manual invigilation is not only labor-intensive but also inconsistent, often missing subtle forms of cheating such as hidden devices, suspicious movements, or prolonged eye aversions. This challenge becomes even more acute in remote and hybrid examination setups, where human supervision alone cannot ensure integrity at scale. Existing solutions lack intelligent automation, contextual awareness, and immediate flagging capabilities. They also fail to provide structured post-exam insights or traceable audit trails. Without integrated multimodal analysis—combining object detection, pose tracking, and behavior mapping—institutions are left with blind spots in ensuring fair and secure assessments.
+                Traditional monitoring systems are ill-equipped to handle the complexities of real-time surveillance across diverse remote environments. Manual supervision is not only labor-intensive but also inconsistent, often missing subtle forms of irregularities such as hidden devices, anomalous movements, or prolonged eye aversions. This challenge becomes even more acute in remote and hybrid assessment setups, where human supervision alone cannot ensure integrity at scale. Existing solutions lack intelligent automation, contextual awareness, and immediate flagging capabilities. They also fail to provide structured post-session insights or traceable audit trails. Without integrated multimodal analysis—combining object detection, pose tracking, and behavior mapping—organizations are left with blind spots in ensuring fair and secure remote sessions.
               </ProjectSectionText>
             </div>
           </ProjectSectionColumns>
@@ -118,11 +118,11 @@ export function VolkiharKnight() {
               <ProjectSectionText as="ul">
                 <li>YOLOv8 processes live video feeds to detect suspicious objects (phones, books, etc.) in real-time.</li>
                 <li>MediaPipe tracks eye movement and pose estimation to detect behavioral anomalies.</li>
-                <li>FastAPI handles real-time alerts and transmits notifications to invigilators.</li>
+                <li>FastAPI handles real-time alerts and transmits notifications to administrators.</li>
                 <li>OpenCV captures and annotates snapshots with bounding boxes and time metadata.</li>
                 <li>A PDF reporting engine compiles all suspicious events, timestamps, and evidence visuals.</li>
                 <li>Dockerized microservices and Kubernetes deployment ensure high scalability and fault tolerance.</li>
-                <li>Optional modules for screen monitoring and keystroke logging provide enhanced hybrid exam analysis.</li>
+                <li>Optional modules for screen monitoring and keystroke logging provide enhanced hybrid session analysis.</li>
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
@@ -154,11 +154,11 @@ export function VolkiharKnight() {
               <ProjectSectionText>
                 ● Reduced query resolution time by 60% through intelligent alerting.
                 <br />
-                ● Enabled real-time exam surveillance with immediate response capability.
+                ● Enabled real-time remote surveillance with immediate response capability.
                 <br />
                 ● Delivered annotated visual evidence via auto-generated PDF reports.
                 <br />
-                ● Empowered educational institutions to conduct secure, large-scale remote assessments with minimal manual oversight.
+                ● Empowered organizations to conduct secure, large-scale remote sessions with minimal manual oversight.
               </ProjectSectionText>
               <Button
                 secondary

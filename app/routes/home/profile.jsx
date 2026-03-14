@@ -1,4 +1,4 @@
-import profileImgLarge from '~/assets/Profile_LG.jpg';
+import profileImgLarge from '~/assets/lavish_dp.png';
 import profileImgPlaceholder from '~/assets/profile-placeholder.jpg';
 import profileImg from '~/assets/Profile_LG.jpg';
 import { Button } from '~/components/button';
@@ -41,7 +41,7 @@ const ProfileText = ({ visible, titleId }) => (
     </Text>
 
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      My journey began in the world of commerce, where I became deeply curious about how data shapes decisions. That curiosity soon turned into code—pushing me to explore machine learning, large language models, and end-to-end AI solutions. 
+      My journey began in the world of commerce, where I became deeply curious about how data shapes decisions. That curiosity soon turned into code—pushing me to explore machine learning, large language models, and end-to-end AI solutions.
     </Text>
 
     <Text className={styles.description} data-visible={visible} size="l" as="p">

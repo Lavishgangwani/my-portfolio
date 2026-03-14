@@ -247,16 +247,17 @@ import { Fragment } from 'react';
 import { media } from '~/utils/style';
 import { baseMeta } from '~/utils/meta';
 import styles from './slice.module.css';
-import marine from '~/assets/marine.png';
-import OnestopChat from '~/assets/OnestopChat.png';
+import ImageAiDesktop from '~/assets/industrial-ai-desktop.png';
+import ImageAiAssistantChatV2 from '~/assets/industrial-ai-assistant-chat-v2.png';
+import ImageAiAssistant from '~/assets/industrial-ai-assistant.png';
 import Marineonestop from '~/assets/Marineonestop.png';
 import Technicalflow from '~/assets/Technicalflow.png';
 import marinebackground from '~/assets/marinebackground.png';
 
 
-const title = 'Multimodal Marine Assistant';
+const title = 'Industrial Operations AI Copilot';
 const description =
-  'An AI-powered assistant purpose-built for marine engineers, combining document intelligence and visual recognition. This system integrates OCR-parsed technical manuals, real-time image analysis, and a domain-specific Retrieval-Augmented Generation (RAG) pipeline trained on proprietary marine datasets. It delivers highly accurate, context-aware responses using a memory-enabled LLM. The assistant handles natural language queries, highlights reference text from engineering PDFs, and correlates visual inputs (e.g., engine parts, control panels) to ensure real-time, multimodal support in high-stakes environments.';
+  'An AI-powered assistant purpose-built for heavy industry engineers, combining document intelligence and visual recognition. This system integrates OCR-parsed technical manuals, real-time image analysis, and a domain-specific Retrieval-Augmented Generation (RAG) pipeline trained on proprietary operational datasets. It delivers highly accurate, context-aware responses using a memory-enabled LLM. The assistant handles natural language queries, highlights reference text from engineering PDFs, and correlates visual inputs (e.g., heavy machinery parts, control panels) to ensure real-time, multimodal support in high-stakes environments.';
 const roles = [
   'Multimodal AI Integration',
   'Domain-Specific RAG Architecture',
@@ -289,11 +290,11 @@ export const Slice = () => {
         <ProjectSection padding="top">
           <ProjectSectionContent>
             <ProjectImage
-              srcSet={`${marine} 800w, ${marine} 1920w`}
+              srcSet={`${ImageAiDesktop} 800w, ${ImageAiDesktop} 1920w`}
               width={800}
               height={500}
               placeholder={sliceAppPlaceholder}
-              alt="Multimodal interface for marine assistant with OCR output and image reference."
+              alt="Multimodal interface for industrial assistant with OCR output and image reference."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -303,7 +304,7 @@ export const Slice = () => {
             <div className={styles.imagesText}>
               <ProjectSectionHeading>Solving operational gaps</ProjectSectionHeading>
               <ProjectSectionText>
-                Marine engineers often work in complex environments with outdated manuals,
+                Field engineers often works in complex environments with outdated heavy equipment manuals,
                 limited technical support, and no unified interface for documentation and
                 visual data. We built an assistant that combines OCR, image processing,
                 and language understanding to bridge this gap.
@@ -317,16 +318,16 @@ export const Slice = () => {
             <div className={styles.sidebarImages}>
               <Image
                 className={styles.sidebarImage}
-                srcSet={`${OnestopChat} 350w, ${OnestopChat} 700w`}
+                srcSet={`${ImageAiAssistant} 350w, ${ImageAiAssistant} 700w`}
                 width={350}
                 height={750}
                 placeholder={sliceSidebarLayersPlaceholder}
-                alt="Layered view of structured document elements in marine manuals."
+                alt="Layered view of structured document elements in industrial manuals."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
               <Image
                 className={styles.sidebarImage}
-                srcSet={`${OnestopChat} 350w, ${OnestopChat} 700w`}
+                srcSet={`${ImageAiAssistantChatV2} 350w, ${ImageAiAssistantChatV2} 700w`}
                 width={350}
                 height={750}
                 placeholder={sliceSidebarAnnotationsPlaceholder}
@@ -375,12 +376,12 @@ export const Slice = () => {
             <div className={styles.gridText}>
               <ProjectSectionHeading>Technical flow</ProjectSectionHeading>
               <ProjectSectionText>
-                ● Utilized Azure Document Intelligence for high-accuracy OCR and layout-aware parsing of scanned ship manuals and technical PDFs.<br />
+                ● Utilized Azure Document Intelligence for high-accuracy OCR and layout-aware parsing of scanned equipment manuals and technical PDFs.<br />
                 ● Custom-trained YOLOv8 model using Roboflow for detecting diagrams, machinery, and labeled figures in engineering manuals. Included extensive data augmentation, annotation pipelines, and class balancing.<br />
                 ● Integrated MediaPipe for real-time eye tracking and pose estimation during live interactions for behavior and engagement analytics.<br />
                 ● Employed Retrieval-Augmented Generation (RAG) architecture with DeepLake vector store and Azure OpenAI’s GPT models for precise semantic retrieval and context-aware response generation.<br />
                 ● Structured document metadata and visual content into unified schema to support multimodal grounding of answers (text + image-based references).<br />
-                ● Designed an asynchronous pipeline to extract figure IDs, text content, and page-level embeddings for scalable marine document ingestion.<br />
+                ● Designed an asynchronous pipeline to extract figure IDs, text content, and page-level embeddings for scalable industrial document ingestion.<br />
                 ● Real-time chat interface supports follow-up queries, memory retention, and visual highlighting of referenced manual sections for better explainability.
               </ProjectSectionText>
             </div>
@@ -391,17 +392,17 @@ export const Slice = () => {
             <ProjectTextRow>
               <ProjectSectionHeading>Project outcomes</ProjectSectionHeading>
               <ProjectSectionText>
-                The intelligent assistant significantly transformed the way marine technicians interact with complex ship manuals and troubleshooting workflows:
+                The intelligent assistant significantly transformed the way field technicians interact with complex equipment manuals and troubleshooting workflows:
                 <br /><br />
                 <strong>Reduced Query Resolution Time by 60%+</strong>: Enabled engineers to get instant, accurate answers from thousands of pages of technical documentation without manual searching.
                 <br /><br />
-                <strong>Real-Time Visual Troubleshooting</strong>: Empowered ship staff to upload images from engine rooms and receive AI-guided diagnostics and object-specific insights—without internet dependency in hybrid deployments.
+                <strong>Real-Time Visual Troubleshooting</strong>: Empowered field staff to upload images from machinery rooms and receive AI-guided diagnostics and object-specific insights—without internet dependency in hybrid deployments.
                 <br /><br />
                 <strong>Frictionless Document Navigation</strong>: Delivered deep linking, page-level highlights, and figure references within parsed manuals for intuitive navigation of dense PDF materials.
                 <br /><br />
                 <strong>Multimodal Intelligence Made Simple</strong>: Seamlessly combined image understanding, OCR-parsed content, and semantic search into a unified interface accessible even to non-technical users.
                 <br /><br />
-                <strong>Operational Efficiency & Training Impact</strong>: Reduced onboarding time for new crew, improved accuracy in maintenance procedures, and decreased reliance on manual consultations with senior engineers.
+                <strong>Operational Efficiency & Training Impact</strong>: Reduced onboarding time for new personnel, improved accuracy in maintenance procedures, and decreased reliance on manual consultations with senior engineers.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
